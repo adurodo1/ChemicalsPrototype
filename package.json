@@ -4,7 +4,8 @@
   "description": "Mock project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "st": "nodemon ./index.js --exec babel-node -e js",
+  "start": "node ./index.js --exec babel-node -e js"
   },
   "author": "abdulsaheed",
   "license": "ISC",
