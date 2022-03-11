@@ -1,5 +1,5 @@
-import { addNewEntry,getParameter,getParameterwithID,updateParameter,deleteParameter ,sendEmail} from "../controllers/parameterController";
-const cors=require('cors')
+import { addNewEntry,getParameter,getParameterwithID,updateParameter,deleteParameter ,sendEmail} from "../controllers/parameterController.js";
+import cors from 'cors'
 const routes=(app)=>{
 
     app.use(cors())

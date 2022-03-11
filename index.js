@@ -1,11 +1,12 @@
 import express from 'express';
 import mongoose from 'mongoose';
  
-import routes from './routes/capstoneRoutes';
+import routes from './routes/capstoneRoutes.js';
 import  { Server} from "socket.io" 
 import http from 'http';
-const cors=require('cors')
-var proxy= require ('./prox');
+import cors from 'cors';
+//import proxy from './prox.js';
+//var proxy= require ('./prox');
 
 
 
@@ -15,7 +16,7 @@ var proxy= require ('./prox');
 const app = express();
 app.use(cors())
 
-proxy(app)
+//proxy(app)
 
 const server = http.createServer(app);//use http to dewrapp express app
 const io = new Server(server,{

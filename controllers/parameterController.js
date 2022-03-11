@@ -1,10 +1,12 @@
 import mongoose  from "mongoose";
 
-import {ParameterSchema} from '../models/parameterModel';
+import {ParameterSchema} from '../models/parameterModel.js';
 
-import { Emails } from "./emails";
+import  Emails from "./emails.js";
 
-import io from '../index'
+//var Emails= require('./emails.js').Emails;
+
+import io from '../index.js'
 
 
 

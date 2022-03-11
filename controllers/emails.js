@@ -1,7 +1,9 @@
 "use strict";
-exports.__esModule = true;
-exports.Emails = void 0;
-var nodemailer = require('nodemailer');
+// exports.__esModule = true;
+// exports.Emails = void 0;
+//var nodemailer = require('nodemailer');
+
+import nodemailer from 'nodemailer';
 var Emails = /** @class */ (function () {
     function Emails(message) {
         this.message = {};
@@ -31,4 +33,4 @@ var Emails = /** @class */ (function () {
     };
     return Emails;
 }());
-exports.Emails = Emails;
+export default  Emails;
