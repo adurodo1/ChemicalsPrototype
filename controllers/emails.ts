@@ -1,9 +1,8 @@
  
 
 
-//var nodemailer = require('nodemailer');
-//lkj;l;j;klj;kljkl
-import nodemailer from 'nodemailer';
+var nodemailer = require('nodemailer');
+
  
  
 

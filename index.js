@@ -28,8 +28,11 @@ const io = new Server(server,{
 const PORT =4000;
 //mongo connection
 mongoose.Promise= global.Promise;
-mongoose.connect('mongodb://localhost/parameterDB',{useNewUrlParser:true,useUnifiedTopology:true})
+
+//mongoose.connect('mongodb://localhost/parameterDB',{useNewUrlParser:true,useUnifiedTopology:true})
 //body parser
+mongoose.connect('mongodb+srv://Saheed22:Saheed22@cluster0.lirry.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+  ,{useNewUrlParser:true,useUnifiedTopology:true})
 
 
 const whitelist = ["http://localhost/:5000"]
