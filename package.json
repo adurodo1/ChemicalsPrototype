@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Mock project",
   "main": "index.js",
-  "typw":"module",
+  "type":"module",
   "scripts": {
     "st": "nodemon ./index.js --exec babel-node -e js",
   "start": "node ./index.js --exec babel-node -e js"
