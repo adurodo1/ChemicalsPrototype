@@ -9,7 +9,7 @@
   },
   "scripts": {
     "st": "nodemon ./index.js --exec babel-node -e js",
-    "start": "node ./index.js --exec babel-node -e js"
+    "start": "node ./index.js "
   },
   "author": "abdulsaheed",
   "license": "ISC",
