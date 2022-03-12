@@ -31,6 +31,6 @@ var Emails = /** @class */ (function () {
     };
     return Emails;
 }());
- 
+exports.Emails = Emails;
 
-export default Emails;
+ 
