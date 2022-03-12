@@ -10,7 +10,7 @@
   "scripts": {
     "st": "nodemon ./index.js --exec babel-node -e js",
     "devstart": "nodemon ./index.js --exec babel-node -e js",
-    "start": "node ./index.js --exec babel-node -e js"
+    "start": "node ./index.mjs --exec babel-node -e js"
   },
   "author": "abdulsaheed",
   "license": "ISC",
