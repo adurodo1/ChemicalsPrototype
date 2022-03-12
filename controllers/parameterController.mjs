@@ -2,7 +2,7 @@ import mongoose  from "mongoose";
 
 import {ParameterSchema} from '../models/parameterModel.mjs';
 
-import  Emails from "./emails.js";
+import  Emails from "./emails.mjs";
 
  
 
