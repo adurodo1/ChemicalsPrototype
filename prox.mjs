@@ -1,4 +1,4 @@
-//const {createProxyMiddleware}  = require("http-proxy-middleware");
+ 
 import {createProxyMiddleware} from 'http-proxy-middleware'
 export const   proxy = app => {
   app.use(
