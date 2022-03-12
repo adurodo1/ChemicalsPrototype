@@ -1,11 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
  
-import routes from './routes/capstoneRoutes.js';
+import routes from './routes/capstoneRoutes.mjs';
 import  { Server} from "socket.io" 
 import http from 'http';
 import cors from 'cors';
-import proxy from './prox'
+import proxy from './prox.mjs'
 
 // var express= require('express')
 // var mongoose = require ('mongoose')
