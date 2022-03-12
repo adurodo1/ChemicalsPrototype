@@ -70,7 +70,7 @@ routes(app);
 
 
 
-server.listen(PORT,()=>{
+server.listen(process.env.PORT||4000,()=>{
     console.log('Server is on'+ PORT);
 
     
