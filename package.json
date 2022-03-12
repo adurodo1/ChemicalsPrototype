@@ -23,7 +23,8 @@
     "express": "^4.17.3",
     "i": "^0.3.7",
     "mongoose": "^6.2.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "nodemailer": "^6.7.2"
   },
   "dependencies": {
     "cors": "^2.8.5",

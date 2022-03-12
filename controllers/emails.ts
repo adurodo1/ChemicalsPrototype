@@ -1,7 +1,10 @@
  
 
 
-var nodemailer = require('nodemailer');
+// var nodemailer = require('nodemailer');
+
+import nodemailer from 'nodemailer'
+ 
 
  
  
@@ -40,11 +43,12 @@ console.log("email working   "+this.message.name)
     to: 'kingolaribigbe@gmail.com',
     subject: 'Test Email Subject',
     text: this.message.name + " " + this.message.ppm
-});
-    }
+}, (err, info) => { console. log (info. envelope)});
+    
 
     //notify tracker
     //a tracker is a list of tq id
     // contains a function call trigger, once called it sends a message to emails 
     
     }
+}
