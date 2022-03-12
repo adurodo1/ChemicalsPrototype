@@ -2,9 +2,9 @@ import mongoose  from "mongoose";
 
 import {ParameterSchema} from '../models/parameterModel.mjs';
 
-//import  Emails from "./emails.js";
+import  Emails from "./emails.js";
 
-var Emails= require('./emails.js');
+ 
 
 import io from '../index.mjs'
 

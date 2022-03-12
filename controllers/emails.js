@@ -1,15 +1,12 @@
-"use strict";
-exports.__esModule = true;
-exports.Emails = void 0;
 var nodemailer = require('nodemailer');
-var Emails = /** @class */ (function () {
-    function Emails(message) {
+export class Emails {
+    constructor(message) {
         this.message = {};
         this.message = message;
         console.log(message);
     }
-    Emails.prototype.send = function () {
-        var transporter = nodemailer.createTransport({
+    send() {
+        const transporter = nodemailer.createTransport({
             host: "smtp-mail.outlook.com",
             secureConnection: false,
             port: 587,
@@ -28,9 +25,5 @@ var Emails = /** @class */ (function () {
             subject: 'Test Email Subject',
             text: this.message.name + " " + this.message.ppm
         });
-    };
-    return Emails;
-}());
-exports.Emails = Emails;
-
- 
+    }
+}
