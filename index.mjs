@@ -5,7 +5,7 @@ import routes from './routes/capstoneRoutes.mjs';
 import  { Server} from "socket.io" 
 import http from 'http';
 import cors from 'cors';
-import proxy from './prox.js'
+import proxy from './prox.mjs'
 
 // var express= require('express')
 // var mongoose = require ('mongoose')
