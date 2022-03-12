@@ -29,7 +29,7 @@ proxy(app)
 const server = http.createServer(app);//use http to dewrapp express app
 const io = new Server(server,{
     cors:{
-        origin:"http://127.0.0.1:5000",
+        origin:"*",
         methods:["GET","POST"]
     }
 });//io, will also be used to refernce similar dependencies in
