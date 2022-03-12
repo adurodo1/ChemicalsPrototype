@@ -1,4 +1,4 @@
-import { addNewEntry,getParameter,getParameterwithID,updateParameter,deleteParameter ,sendEmail} from "../controllers/parameterController.js";
+import { addNewEntry,getParameter,getParameterwithID,updateParameter,deleteParameter ,sendEmail} from "../controllers/parameterController.mjs";
 import cors from 'cors'
 const routes=(app)=>{
 
