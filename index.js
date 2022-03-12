@@ -5,7 +5,15 @@ import routes from './routes/capstoneRoutes.js';
 import  { Server} from "socket.io" 
 import http from 'http';
 import cors from 'cors';
-//import proxy from './prox.js';
+import proxy from './prox'
+
+// var express= require('express')
+// var mongoose = require ('mongoose')
+// var routes = rquire('./routes/capstoneRoutes.js')
+// var Server= require ('socket.io ').Server
+// var http = require('http')
+// var cors = require('cors')
+// //import proxy from './prox.js';
 //var proxy= require ('./prox');
 
 
@@ -16,7 +24,7 @@ import cors from 'cors';
 const app = express();
 app.use(cors())
 
-//proxy(app)
+proxy(app)
 
 const server = http.createServer(app);//use http to dewrapp express app
 const io = new Server(server,{
@@ -36,17 +44,17 @@ mongoose.connect('mongodb+srv://Saheed22:Saheed22@cluster0.lirry.mongodb.net/myF
   ,{useNewUrlParser:true,useUnifiedTopology:true})
 
 
-const whitelist = ["http://localhost/:5000"]
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error("Not allowed by CORS"))
-    }
-  },
-  credentials: true,
-}
+// const whitelist = ["http://localhost/:5000"]
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (!origin || whitelist.indexOf(origin) !== -1) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error("Not allowed by CORS"))
+//     }
+//   },
+//   credentials: true,
+// }
 
  
 app.use(express.urlencoded({extended:true}))

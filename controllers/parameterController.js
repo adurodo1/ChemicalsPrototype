@@ -2,7 +2,7 @@ import mongoose  from "mongoose";
 
 import {ParameterSchema} from '../models/parameterModel.js';
 
-import  Emails from "./emails.js";
+import  {Emails} from "./emails.js";
 
 //var Emails= require('./emails.js').Emails;
 
