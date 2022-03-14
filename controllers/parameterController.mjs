@@ -19,6 +19,7 @@ export const addNewEntry =(req,res) =>{
         if(err){
             res.send(err)
         }
+        console.log(param)
         res.json(param);
     });
 }
