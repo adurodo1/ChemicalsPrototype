@@ -15,33 +15,33 @@ const Parameter= mongoose.model('Parameter',ParameterSchema);
 export const addNewEntry =(req,res) =>{
     let newPlayer = new Parameter(req.body);
 
-    newPlayer.save((err,player)=>{
+    newPlayer.save((err,param)=>{
         if(err){
             res.send(err)
         }
-        res.json(player);
+        res.json(param);
     });
 }
 
 export const getParameter =(req,res) =>{
  
 
-    Parameter.find({},(err,player)=>{
+    Parameter.find().sort({ _id: -1},(err,param)=>{
         if(err){
             res.send(err)
         }
-        res.json(player);
+        res.json(param);
     });
 }
 
 export const getParameterwithID =(req,res) =>{
  
 
-    Parameter.findById(req.params.ParameterId,(err,player)=>{
+    Parameter.findById(req.params.ParameterId,(err,param)=>{
         if(err){
             res.send(err)
         }
-        res.json(player);
+        res.json(param);
     });
 }
 
@@ -49,11 +49,11 @@ export const getParameterwithID =(req,res) =>{
 export const updateParameter =(req,res) =>{
  
 
-    Parameter.findOneAndUpdate({id_:req.params.ParameterId},req.body,{new:true},(err,player)=>{
+    Parameter.findOneAndUpdate({id_:req.params.ParameterId},req.body,{new:true},(err,param)=>{
         if(err){
             res.send(err)
         }
-        res.json(player);
+        res.json(param);
     });
 }
 
@@ -62,11 +62,11 @@ export const updateParameter =(req,res) =>{
 export const deleteParameter =(req,res) =>{
  
 
-    Parameter.deleteOne({id_:req.params.ParameterId},(err,player)=>{
+    Parameter.deleteOne({id_:req.params.ParameterId},(err,param)=>{
         if(err){
             res.send(err)
         }
-        res.json(player);
+        res.json(param);
     });
 }
 
