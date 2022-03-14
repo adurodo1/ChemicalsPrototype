@@ -1,6 +1,7 @@
 import mongoose  from "mongoose";
 
 import {ParameterSchema} from '../models/parameterModel.mjs';
+import {alertSchema} from '../models/alertModel.mjs'
 
 import  {Emails} from "./emails.mjs";
 
@@ -11,11 +12,12 @@ import io from '../index.mjs'
 
 
 const Parameter= mongoose.model('Parameter',ParameterSchema);
+const Alerts= mongoose.model('ParameterAlert',ParameterSchema);
 
 export const addNewEntry =(req,res) =>{
-    let newPlayer = new Parameter(req.body);
+    let newParams = new Parameter(req.body);
 
-    newPlayer.save((err,param)=>{
+    newParams.save((err,param)=>{
         if(err){
             res.send(err)
         }
@@ -75,13 +77,27 @@ export const deleteParameter =(req,res) =>{
 
 
 
-export const sendEmail =async (req,res) =>{
+export const sendEmail = (req,res) =>{
  
  var email = new Emails(req.body);
 
- //await email.send();
- await io.emit('AlertEvent', {alert:req.body});//Emits the Alert
+//  let newAlerts = new Alerts(req.body);
 
- console.log(req.body)
+//  await newAlerts.save((err,param)=>{
+//      if(err){
+//          res.send(err)
+//      }
+     
+//      console.log(param)
+   
+//     // res.json(param);
+//  });
+
+
+  io.emit('AlertEvent', {alert:req.body});//Emits the Alert
+ //await email.send();
+
+
+ console.log(param)
    
 }
