@@ -81,17 +81,17 @@ export const sendEmail =async (req,res) =>{
  
  var email = new Emails(req.body);
 
- let newAlerts = new Alerts(req.body);
+//  let newAlerts = new Alerts(req.body);
 
- await newAlerts.save((err,param)=>{
-     if(err){
-         res.send(err)
-     }
+//  await newAlerts.save((err,param)=>{
+//      if(err){
+//          res.send(err)
+//      }
      
-     console.log(param)
+//      console.log(param)
    
-    // res.json(param);
- });
+//     // res.json(param);
+//  });
 
 
  await io.emit('AlertEvent', {alert:req.body});//Emits the Alert
