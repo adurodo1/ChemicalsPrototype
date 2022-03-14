@@ -20,6 +20,7 @@ export const addNewEntry =(req,res) =>{
             res.send(err)
         }
         console.log(param)
+        io.emit('NewEntry', {new:req.body});//Emits the Alert
         res.json(param);
     });
 }
