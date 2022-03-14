@@ -18,6 +18,11 @@ export const ParameterSchema= new Schema({
         required: true
     }
      ,
+
+     status:{
+        type:String,
+        required:false
+     },
      created_date:{type:Date,default:Date.now},
      updated_date:{type:Date,default:Date.now}
 
@@ -28,3 +33,5 @@ export const ParameterSchema= new Schema({
 //     collection: 'parameters'
 // }
 );
+
+
