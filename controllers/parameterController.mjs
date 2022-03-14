@@ -26,7 +26,7 @@ export const addNewEntry =(req,res) =>{
 export const getParameter =(req,res) =>{
  
 
-    Parameter.find().sort({ _id: -1},(err,param)=>{
+    Parameter.find().sort({ _id: -1}).exec((err,param)=>{
         if(err){
             res.send(err)
         }
